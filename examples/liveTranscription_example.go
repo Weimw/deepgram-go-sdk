@@ -17,7 +17,8 @@ func main() {
 	client := new(http.Client)
 	// IMPORTANT: Make sure you add your own API key here
 	dg := *deepgram.NewClient("YOUR_API_KEY")
-	resp, err := client.Get("http://stream.live.vc.bbcmedia.co.uk/bbc_radio_fourlw_online_nonuk")
+	// Make sure the stream is still working
+	resp, err := client.Get("http://stream.live.vc.bbcmedia.co.uk/bbc_world_service")
 	if err != nil {
 		log.Println("ERRROR getting stream", err)
 	}
